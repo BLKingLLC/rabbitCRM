@@ -1,0 +1,81 @@
+<div>
+    <h2 id="page-heading">
+        <span>Leads</span>
+        <button id="jh-create-entity" class="btn btn-primary float-right jh-create-entity create-lead" [routerLink]="['/lead/new']">
+            <fa-icon [icon]="'plus'"></fa-icon>
+            <span >
+            Create a new Lead
+            </span>
+        </button>
+    </h2>
+    <jhi-alert-error></jhi-alert-error>
+    <jhi-alert></jhi-alert>
+    <br/>
+    <div class="alert alert-warning" *ngIf="leads?.length === 0">
+        <span>No leads found</span>
+    </div>
+    <div class="table-responsive" *ngIf="leads?.length > 0">
+        <table class="table table-striped" aria-describedby="page-heading">
+            <thead>
+            <tr>
+            <th scope="col" ><span>ID</span></th>
+            <th scope="col" ><span>Source</span></th>
+            <th scope="col" ><span>Last Name</span></th>
+            <th scope="col" ><span>First Name</span></th>
+            <th scope="col" ><span>Title</span></th>
+            <th scope="col" ><span>Company Name</span></th>
+            <th scope="col" ><span>State</span></th>
+            <th scope="col" ><span>Country</span></th>
+            <th scope="col" ><span>County</span></th>
+            <th scope="col" ><span>City</span></th>
+            <th scope="col" ><span>Zip</span></th>
+            <th scope="col" ><span>Contacted</span></th>
+            <th scope="col" ><span>Do Not Contact</span></th>
+            <th scope="col" ><span>Email</span></th>
+            <th scope="col" ><span>Phone</span></th>
+            <th scope="col"></th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr *ngFor="let lead of leads ;trackBy: trackId">
+                <td><a [routerLink]="['/lead', lead.id, 'view' ]">{{lead.id}}</a></td>
+                <td>{{lead.source}}</td>
+                <td>{{lead.lastName}}</td>
+                <td>{{lead.firstName}}</td>
+                <td>{{lead.title}}</td>
+                <td>{{lead.companyName}}</td>
+                <td>{{lead.state}}</td>
+                <td>{{lead.country}}</td>
+                <td>{{lead.county}}</td>
+                <td>{{lead.city}}</td>
+                <td>{{lead.zip}}</td>
+                <td>{{lead.contacted}}</td>
+                <td>{{lead.doNotContact}}</td>
+                <td>{{lead.email}}</td>
+                <td>{{lead.phone}}</td>
+                <td class="text-right">
+                    <div class="btn-group">
+                        <button type="submit"
+                                [routerLink]="['/lead', lead.id, 'view' ]"
+                                class="btn btn-info btn-sm">
+                            <fa-icon [icon]="'eye'"></fa-icon>
+                            <span class="d-none d-md-inline">View</span>
+                        </button>
+                        <button type="submit"
+                                [routerLink]="['/lead', lead.id, 'edit']"
+                                class="btn btn-primary btn-sm">
+                            <fa-icon [icon]="'pencil-alt'"></fa-icon>
+                            <span class="d-none d-md-inline">Edit</span>
+                        </button>
+                        <button type="submit" (click)="delete(lead)"
+                                class="btn btn-danger btn-sm">
+                            <fa-icon [icon]="'times'"></fa-icon>
+                            <span class="d-none d-md-inline">Delete</span>
+                        </button>
+                    </div>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

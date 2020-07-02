@@ -1,0 +1,79 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="lead">
+            <h2><span>Lead</span> {{lead.id}}</h2>
+            <hr>
+            <jhi-alert-error></jhi-alert-error>
+            <dl class="row-md jh-entity-details">
+                <dt><span>Source</span></dt>
+                <dd>
+                    <span>{{lead.source}}</span>
+                </dd>
+                <dt><span>Last Name</span></dt>
+                <dd>
+                    <span>{{lead.lastName}}</span>
+                </dd>
+                <dt><span>First Name</span></dt>
+                <dd>
+                    <span>{{lead.firstName}}</span>
+                </dd>
+                <dt><span>Title</span></dt>
+                <dd>
+                    <span>{{lead.title}}</span>
+                </dd>
+                <dt><span>Company Name</span></dt>
+                <dd>
+                    <span>{{lead.companyName}}</span>
+                </dd>
+                <dt><span>State</span></dt>
+                <dd>
+                    <span>{{lead.state}}</span>
+                </dd>
+                <dt><span>Country</span></dt>
+                <dd>
+                    <span>{{lead.country}}</span>
+                </dd>
+                <dt><span>County</span></dt>
+                <dd>
+                    <span>{{lead.county}}</span>
+                </dd>
+                <dt><span>City</span></dt>
+                <dd>
+                    <span>{{lead.city}}</span>
+                </dd>
+                <dt><span>Zip</span></dt>
+                <dd>
+                    <span>{{lead.zip}}</span>
+                </dd>
+                <dt><span>Contacted</span></dt>
+                <dd>
+                    <span>{{lead.contacted}}</span>
+                </dd>
+                <dt><span>Do Not Contact</span></dt>
+                <dd>
+                    <span>{{lead.doNotContact}}</span>
+                </dd>
+                <dt><span>Email</span></dt>
+                <dd>
+                    <span>{{lead.email}}</span>
+                </dd>
+                <dt><span>Phone</span></dt>
+                <dd>
+                    <span>{{lead.phone}}</span>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon [icon]="'arrow-left'"></fa-icon>&nbsp;<span> Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/lead', lead.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon [icon]="'pencil-alt'"></fa-icon>&nbsp;<span> Edit</span>
+            </button>
+        </div>
+    </div>
+</div>
