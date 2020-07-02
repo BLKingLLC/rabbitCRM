@@ -1,0 +1,17 @@
+entity Lead {
+	source String,
+    lastName String,
+    firstName String,
+    title String,
+    companyName String,
+    state String,
+    country String,
+    county String,
+    city String,
+    zip String,
+    contacted Boolean,
+    doNotContact Boolean,
+    email String
+    phone String
+    
+}

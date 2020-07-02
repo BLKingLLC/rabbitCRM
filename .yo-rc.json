@@ -1,0 +1,40 @@
+{
+  "generator-jhipster": {
+    "promptValues": {
+      "packageName": "net.blking.rabbit"
+    },
+    "jhipsterVersion": "6.6.0",
+    "applicationType": "monolith",
+    "baseName": "rabbitCRM",
+    "packageName": "net.blking.rabbit",
+    "packageFolder": "net/blking/rabbit",
+    "serverPort": "8080",
+    "authenticationType": "jwt",
+    "cacheProvider": "ehcache",
+    "enableHibernateCache": true,
+    "websocket": false,
+    "databaseType": "sql",
+    "devDatabaseType": "mysql",
+    "prodDatabaseType": "mysql",
+    "searchEngine": false,
+    "messageBroker": false,
+    "serviceDiscoveryType": false,
+    "buildTool": "maven",
+    "enableSwaggerCodegen": false,
+    "jwtSecretKey": "MTVmZTJhMDYzNjYzMDI4ZmEyOGJmYjEwY2M5ZWZlMTkzMjFjMTI1MDZiM2ZjZTFiODc5NzdkN2UxZDI2YTI2MWZhOTM0MjVlZDU2MWFlZWU2NTJmZjNlMjY3ZTFhMDAxOWNhN2RiOTE3YmQyMTJmZWNjNDIxNjdmNWM5MGU3ODQ=",
+    "embeddableLaunchScript": false,
+    "useSass": true,
+    "clientPackageManager": "npm",
+    "clientFramework": "angularX",
+    "clientTheme": "darkly",
+    "clientThemeVariant": "dark",
+    "creationTimestamp": 1593702173324,
+    "testFrameworks": [],
+    "jhiPrefix": "jhi",
+    "entitySuffix": "",
+    "dtoSuffix": "DTO",
+    "otherModules": [],
+    "enableTranslation": false,
+    "blueprints": []
+  }
+}
